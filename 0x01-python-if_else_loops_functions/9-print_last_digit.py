@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_last_digit(number):
     if number == 0:
-        print(number)
+        print("00")
     elif number < 10:
         print(number)
     else:
