@@ -5,17 +5,13 @@ if __name__ == "__main__":
     b = 5
 
     # Addition
-    sum = add(a, b)
-    print("Addition of", a, "and", b, "is:", sum)
+    print(f"{a} + {b} = {add(a, b)}")
 
     # Subtraction
-    diff = sub(a, b)
-    print("Difference between", a, "and", b, "is:", diff)
+    print(f"{a} - {b} = {sub(a, b)}")
 
     # Multiplication
-    prod = mul(a, b)
-    print("Product of", a, "and", b, "is:", prod)
+    print(f"{a} * {b} = {mul(a, b)}")
 
     # Division
-    division = div(a, b)
-    print("Division of", a, "and", b, "is:", division)
+    print(f"{a} / {b} = {div(a, b)}")
