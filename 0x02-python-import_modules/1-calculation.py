@@ -5,13 +5,13 @@ if __name__ == "__main__":
     b = 5
 
     # Addition
-    print(f"{a} + {b} = {add(a, b)}")
+    print("{} + {} = {}".format(a, b, add(a, b)))
 
     # Subtraction
-    print(f"{a} - {b} = {sub(a, b)}")
+    print("{} - {} = {}".format(a, b, sub(a, b)))
 
     # Multiplication
-    print(f"{a} * {b} = {mul(a, b)}")
+    print("{} * {} = {}".format(a, b, mul(a, b)))
 
     # Division
-    print(f"{a} / {b} = {div(a, b)}")
+    print("{} / {} = {}".format(a, b, div(a, b)))
