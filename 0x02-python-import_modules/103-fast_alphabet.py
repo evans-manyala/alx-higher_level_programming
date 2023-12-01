@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-print(''.join(chr(65 + x)
-              for x in range(26)), end='\n')
+print(chr(x + 65) for x in range(26))
