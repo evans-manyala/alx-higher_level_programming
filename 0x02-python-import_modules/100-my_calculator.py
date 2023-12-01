@@ -2,8 +2,8 @@
 import calculator_1
 import sys
 
-if len(sys.argv) != 4:
-    print("Uknonw length", file=sys.stderr)
+if len(sys.argv) != 3:
+    print("Usage: ./100-my_calculator.py <a> <operator> <b>", file=sys.stderr)
     sys.exit(1)
 
     a = int(sys.argv[1])
@@ -11,7 +11,8 @@ if len(sys.argv) != 4:
     b = int(sys.argv[3])
 
     if operator not in "+-*/":
-        print("Unknown operator.", file=sys.stderr)
+        print("Unknown operator. Available operators: +, -, * and /")
+        print(file=sys.stderr)
         sys.exit(1)
     ans = 0
 
