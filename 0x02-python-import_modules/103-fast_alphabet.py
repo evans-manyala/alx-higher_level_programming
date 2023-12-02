@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print(chr(x + 65) for x in range(26))
+import codecs
+print(codecs.encode(bytearray(map(lambda i: i + 65, range(26))),
+                    "ascii").decode("ascii"), end="")
