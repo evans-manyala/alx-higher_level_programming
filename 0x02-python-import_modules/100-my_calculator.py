@@ -5,17 +5,15 @@ if __name__ == "__main__":
 
     if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        print(file=sys.stderr)
         sys.exit(1)
-        a = int(sys.argv[1])
-        operator = sys.argv[2]
-        b = int(sys.argv[3])
+
+    a = int(sys.argv[1])
+    operator = sys.argv[2]
+    b = int(sys.argv[3])
 
     if operator not in "+-*/":
         print("Unknown operator. Available operators: +, -, * and /")
-        print(file=sys.stderr)
         sys.exit(1)
-        ans = 0
 
     if operator == "+":
         ans = calculator_1.add(a, b)
