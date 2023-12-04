@@ -18,9 +18,9 @@ if __name__ == "__main__":
     if operator == "+":
         ans = calculator_1.add(a, b)
     elif operator == "-":
-        ans = calculator_1.subtract(a, b)
+        ans = calculator_1.sub(a, b)
     elif operator == "*":
-        ans = calculator_1.multiply(a, b)
+        ans = calculator_1.mul(a, b)
     else:
-        ans = calculator_1.divide(a, b)
+        ans = calculator_1.div(a, b)
     print("{} {} {} = {}".format(a, operator, b, ans))
