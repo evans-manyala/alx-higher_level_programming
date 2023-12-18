@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def safe_print_list(my_list=[], y=0):
     printed_items = 0
     try:
