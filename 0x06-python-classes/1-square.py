@@ -10,4 +10,4 @@ class Square:
         Args:
             size (Any): the size of the square
         """
-        self.__size = size
+        self.__size = size  # Private attribute 
