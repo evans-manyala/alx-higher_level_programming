@@ -12,4 +12,4 @@ class Square:
             size (Any type): the size of the square
         """
 
-        self._sizesize = size
+        self._size = size
