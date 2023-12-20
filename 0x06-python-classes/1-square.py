@@ -3,5 +3,12 @@
 
 class Square:
     def __init__(self, size):
-        """Represents a square."""
+        """
+        Represents a square
+       
+        ""
+        Args:
+            size (Any type): the size of the square
+        """
+
         self._sizesize = size
