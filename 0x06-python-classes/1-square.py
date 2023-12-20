@@ -3,11 +3,8 @@
 
 
 class Square:
-    def __init__(self, size):
-        """
-        Represents a square
+    """Represents a square."""
 
-        Args:
-            size (Any): the size of the square
-        """
-        self.__size = size  # Private attribute 
+    def __init__(self, size):
+        """Initializes a new Square object with the given size."""
+        self.__size = size  # Private attribute
