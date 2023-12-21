@@ -53,3 +53,20 @@ class Square:
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self._position = value
+
+    def area(self):
+        """Calculate and return the area of the square."""
+        return self.size ** 2
+
+    def my_print(self):
+        """Print the square representation using '#' characters."""
+        if self.size == 0:
+            print()  # Empty line for size 0
+        else:
+            for i in range(self.position[1]):
+                print()  # Print empty lines for vertical position
+            for _ in range(self.size):
+                print(
+                    " " * self.position[0], end=""
+                )  # Print spaces for horizontal position
+                print("#" * self.size)
