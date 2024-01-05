@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Define a class square
+Define a class rectangle
 """
 
 
 class Rectangle:
     """
-    Represents a square
+    Represents a rectangle
     """
     pass
