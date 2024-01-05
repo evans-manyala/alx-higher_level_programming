@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Define a class rectangle
+Models a rectangle class
 """
 
 
 class Rectangle:
-    def __init__(self, width=0, height=0):
+    def __init__(self, width: int = 0, height: int = 0):
         """
         Initializes a rectangle with the given width and height.
 
@@ -37,10 +37,9 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError("Height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("Height must be >= 0")
-        else:
-            self._height = value
+        self._height = value
 
     @property
     def width(self):
@@ -63,7 +62,6 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError("Width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("Width must be >= 0")
-        else:
-            self._width = value
+        self._width = value
