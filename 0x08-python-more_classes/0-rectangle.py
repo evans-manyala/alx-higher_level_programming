@@ -1,11 +1,11 @@
 #!/usr/bin/pyhon3
 """
-Defines Class Rectangle
+Define a class square
 """
 
 
 class Rectangle:
     """
-    Represents a rectangle.
+    Represents a square.
     """
     pass
