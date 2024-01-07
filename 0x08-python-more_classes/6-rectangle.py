@@ -4,6 +4,7 @@
 
 class Rectangle:
     """Represents a rectangle."""
+    number_of_instances = 0  # Public class attribute
 
     def __init__(self, width=0, height=0):
         """
@@ -15,6 +16,7 @@ class Rectangle:
         """
         self.width = width  # property setter for validation
         self.height = height  # property setter for validation
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -67,4 +69,4 @@ class Rectangle:
     def __del__(self):
         """Prints a message when rectangle instance is deleted"""
         print("Bye Rectangle...")
-        Rectangle.number_of_instancss -= 1
+        Rectangle.number_of_instances -= 1
