@@ -36,7 +36,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Sets the height of the rectangle, with type and value validation."""
+        """Sets the height of the rectangle, the type and value validation."""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -48,7 +48,7 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        """Returns the perimeter of the rectangle, considering zero dimensions."""
+        """Returns the perimeter of the rectangle, even with dimensions as zero."""
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
