@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Models a rectangle class"""
-
+"""Creating a class Rectangle that defines a rectangle object"""
 
 class Rectangle:
     """Rectangle Class"""
