@@ -1,0 +1,25 @@
+"These are sample test cases for the add_integer python function"
+
+# Test Case 1: Basic addition
+assert add_integer(1, 2) == 4
+
+# Test Case 2: Negative numbers
+assert add_integer(90, -2) == 88
+
+# Test Case 3: Missing second parameter (uses default value)
+assert add_integer(2) == 100
+
+# Test Case 4: Floats are casted to integers
+assert add_integer(100.3, -2) == 98
+
+# Test Case 5: Invalid type for second parameter
+try:
+    add_integer(4, "School")
+except TypeError as e:
+    assert str(e) == "b must be an integer"
+
+# Test Case 6: Invalid type for first parameter
+try:
+    add_integer(None)
+except TypeError as e:
+    assert str(e) == "a must be an integer"
