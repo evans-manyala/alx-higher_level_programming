@@ -3,6 +3,6 @@
 """Define an emoty class"""
 
 
-def BaseGeometry():
+class BaseGeometry:
     """Empty class"""
     pass
