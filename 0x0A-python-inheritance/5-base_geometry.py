@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Define an emoty class"""
+"""Define an empty class"""
 
 
 class BaseGeometry:
