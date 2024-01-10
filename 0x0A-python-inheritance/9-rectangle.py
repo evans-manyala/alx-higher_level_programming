@@ -16,3 +16,10 @@ class Rectangle (BaseGeometry):
 
         self.width = width
         self.height = height
+    def area(self):
+        """Returns area of a rectangle"""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """Returns sring output to console"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
