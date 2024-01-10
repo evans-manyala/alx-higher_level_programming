@@ -2,7 +2,7 @@
 """Class Rectangle that inherits fron Base Geometry class"""
 
 
-Rectangle = __import__('9-rectangle.py')
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square (Rectangle):
@@ -19,9 +19,9 @@ class Square (Rectangle):
         """
 
         self.integer_validator("size", size)
-        super().__init__(size, size)
+        self.__size = size
 
     def area(self):
         """Calculates and returns the area of the square."""
 
-        return super().area()
+        return self.__size ** 2
