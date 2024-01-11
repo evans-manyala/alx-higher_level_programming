@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Function reads a file and prints to the stdout"""
 
 
@@ -8,7 +8,6 @@ def read_file(filename=""):
     Args:
         filename (str, optional): The name of the file to read. Defaults to "".
     """
-
     with open(filename, "r", encoding="utf-8") as file:
         file_content = file.read()
-        print(file_content, end="")
+        print(file_content, end='')
