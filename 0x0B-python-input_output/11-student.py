@@ -3,6 +3,7 @@
 Represents a student with first name, last name, and age.
 """
 
+
 class Student:
     """Defines a student object with first name,
     last name and age"""
