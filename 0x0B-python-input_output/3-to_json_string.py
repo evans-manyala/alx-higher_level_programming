@@ -13,10 +13,5 @@ def to_json_string(my_obj):
     Returns:
       str: The JSON representation of the object as a string.
     """
-
-    try:
-        json_string = json.dumps(my_obj)
-    except TypeError:
-        # Object cannot be serialized to JSON
-        json_string = None
+    json_string = json.dumps(my_obj)
     return json_string
