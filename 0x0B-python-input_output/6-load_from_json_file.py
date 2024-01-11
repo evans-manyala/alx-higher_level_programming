@@ -12,7 +12,8 @@ def load_from_json_file(filename):
       filename: The name of the JSON file to read.
 
     Returns:
-      Any: The Python object represented by the JSON file, or None if the file doesn't exist or is invalid JSON.
+      Any: The Python object represented by the JSON file, or
+      None if the file doesn't exist or is invalid JSON.
     """
     with open(filename, "r", encoding="utf-8") as file:
         json_string = file.read()
