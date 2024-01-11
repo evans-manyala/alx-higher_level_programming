@@ -26,5 +26,6 @@ def add_items_to_file():
     save_to_json_file(all_items, "add_item.json")
     print(f"Items saved to 'add_item.json': {all_items}")
 
-    if __name__ == "__main__":
-        add_items_to_file()
+
+if __name__ == "__main__":
+    add_items_to_file()
