@@ -1,4 +1,4 @@
-#!/usr/binn/python3
+#!/usr/bin/python3
 """
 Represents a student with first name, last name, and age.
 """
