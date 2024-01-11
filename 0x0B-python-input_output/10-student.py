@@ -23,7 +23,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get a dictionary representation of the student if in attrs"""
+        """Get a dictionary representation of the student"""
         if attrs is not None:
             return {attr: getattr(self, attr)
                     for attr in attrs if hasattr(self, attr)}
