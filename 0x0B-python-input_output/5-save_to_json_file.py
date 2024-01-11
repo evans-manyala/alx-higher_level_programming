@@ -1,4 +1,4 @@
-#!/usr/bin/pythonnn3
+#!/usr/bin/python3
 """Function writes an object to a text file using JSON Notation"""
 
 
