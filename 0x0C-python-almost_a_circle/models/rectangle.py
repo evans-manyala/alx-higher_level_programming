@@ -7,12 +7,9 @@ from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        # Class constructor
 
-        # Call the super class with id
         super().__init__(id)
 
-        # Assign each argument to the corresponding attribute
         self.width = width
         self.height = height
         self.x = x
@@ -70,5 +67,11 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        for _ in range(self.y):
+            print()
         for _ in range(self.height):
-            print('#' * self.width)
+            print(" " * self.x + "#" * self.width)
+
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+        f"{self.width}/{self.height}"
