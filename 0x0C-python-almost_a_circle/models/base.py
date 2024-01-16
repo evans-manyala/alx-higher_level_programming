@@ -2,6 +2,9 @@
 """Clas Base"""
 
 
+import json
+
+
 class Base:
     __nb_objects = 0  # Private class attribute to count objects
 
@@ -19,3 +22,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
