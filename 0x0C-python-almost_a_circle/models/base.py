@@ -30,13 +30,18 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
-    def create(cls, **dictionary):
-        if cls.__name__ == "Rectangle":
-            dummy_instance = cls(1, 1)
-        elif cls.__name__ == "Square":
-            dummy_instance = cls(1)
-        dummy_instance.update(**dictionary)
-        return dummy_instance
+    def save_to_file(cls, list_objs):
+        filename = f"{cls.__name__}.json"
+
+        if list_objs is not None:
+            list_dicts = [obj.to_dictionary() for obj in list_objs]
+        else:
+            list_dicts = []
+
+        json_data = cls.to_json_string(list_dicts)
+
+        with open(filename, 'w') as file:
+            file.write(json_data)
 
     @staticmethod
     def from_json_string(json_string):
@@ -44,6 +49,15 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
 
     @classmethod
     def load_from_file(cls):
