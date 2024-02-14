@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-"""Defines class"""
-
-
 class Square:
     """Represents a square."""
 
@@ -10,10 +6,12 @@ class Square:
 
         Args:
             size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The position of the square (x, y). Defaults to (0, 0).
+            position (tuple, optional): The position of the square (x, y).
+            Defaults to (0, 0).
         """
         self._size = size
-        self.position = position  # Set position using the property setter
+        if position:  # Check if position is provided
+            self.position = position  # Set position using the property setter
 
     @property
     def size(self):

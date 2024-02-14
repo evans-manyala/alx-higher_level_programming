@@ -1,86 +1,57 @@
 #include "lists.h"
 
 /**
- * find_middle_node - Finds the middle node of a linked list
- * @head: Pointer to the head of the list
- * Return: Pointer to the middle node
+ * is_palindrome - Checks if a linked list is a palindrome.
+ * @head: Pointer to the head of the list.
+ * Return: 1 if palindrome, 0 otherwise.
  */
-listint_t *find_middle_node(listint_t *head)
-{
-	listint_t *slow = head, *fast = head;
-
-	while (fast && fast->next)
-	{
-		slow = slow->next;
-		fast = fast->next->next;
-	}
-	return (slow);
-}
-
-/**
- * free_list - Frees a linked list
- * @head: Pointer to the head of the list
- */
-void free_list(listint_t *head)
-{
-	while (head)
-	{
-		listint_t *next_node = head->next;
-
-		free(head);
-		head = next_node;
-	}
-}
-
 int is_palindrome(listint_t **head)
 {
+	listint_t *current = *head, *next_second_half = *head;
+	listint_t *second_half_head = *head, *reversed_current = NULL;
+	int is_palindrome = 0, is_odd_length = 0, length = 0;
+
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	listint_t *slow = *head, *fast = *head;
+	for (length = 0; second_half_head->next; second_half_head =
+						     second_half_head->next,
+	    length++)
+		is_odd_length = length % 2 != 0;
+	reversed_current = NULL;
+	next_second_half = *head;
+	second_half_head = *head;
 
-	while (fast && fast->next)
+	for (int x = 0; x < length; x++)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-	}
-	listint_t *prev = NULL, *current = slow, *next_node;
-
-	while (current)
-	{
-		next_node = current->next;
-		current->next = prev;
-		prev = current;
-		current = next_node;
-	}
-	listint_t *first_half = *head;
-	listint_t *second_half = prev;
-
-	while (second_half)
-	{
-		if (first_half->n != second_half->n)
+		if (is_palindrome)
+			break;
+		if (x == length / 2)
 		{
-			current = prev;
-			prev = NULL;
-			while (current)
-			{
-				next_node = current->next;
-				current->next = prev;
-				prev = current;
-				current = next_node;
-			}
-			return (0);
+			if (is_odd_length)
+				second_half_head = second_half_head->next;
+			reversed_current = next_second_half;
+			next_second_half = next_second_half->next;
+			second_half_head->next = NULL;
 		}
-		first_half = first_half->next;
-		second_half = second_half->next;
+		else if (x > length / 2)
+		{
+			next_second_half = next_second_half->next;
+			second_half_head->next = reversed_current;
+			reversed_current = second_half_head;
+			second_half_head = next_second_half;
+		}
 	}
-	current = prev;
-	prev = NULL;
-	while (current)
+	next_second_half->next = reversed_current;
+	while (next_second_half)
 	{
-		next_node = current->next;
-		current->next = prev;
-		prev = current;
-		current = next_node;
+		if (current->n != next_second_half->n)
+		{
+			is_palindrome = 0;
+			break;
+		}
+		current = current->next;
+		next_second_half = next_second_half->next;
 	}
-	return (1);
+	next_second_half->next = reversed_current;
+	return (is_palindrome);
 }

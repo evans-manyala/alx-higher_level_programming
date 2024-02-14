@@ -12,6 +12,7 @@ class Square:
             TypeError: If the size is not an integer.
             ValueError: If the size is less than 0.
         """
+        
         self._size = size  # Private attribute
 
     @property
