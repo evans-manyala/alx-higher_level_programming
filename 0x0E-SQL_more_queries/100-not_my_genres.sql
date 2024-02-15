@@ -4,10 +4,9 @@
 --  The database name will be passed as an argument of the mysql command
 
 SELECT tv_genres.name
-FROM tv_genres AS genre
-WHERE genre.id NOT IN
-        (SELECT sg.genre_id
-         FROM tv_genres.tv_show_genres AS sg
-         JOIN tv_genres.tv_shows AS t ON sg.show_id = t.id
-         WHERE t.title = 'Dexter')
-ORDER BY genre.name ASC;
+FROM tv_genres
+LEFT JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
+LEFT JOIN tv_shows ON tv_show_genres.show_id = tv_shows.id
+WHERE tv_shows.title IS NULL
+    OR tv_shows.title <> 'Dexter'
+ORDER BY tv_genres.name ASC;
