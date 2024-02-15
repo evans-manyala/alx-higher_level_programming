@@ -7,6 +7,6 @@
 SELECT title,
        SUM(tv_show_ratings.rating) AS 'rating'
 FROM tv_shows
-LEFT JOIN tv_show_ratings ON tv_shows_ratings.show_id = tv_show.id
+LEFT JOIN tv_show_ratings ON tv_shows_ratings.show_id = tv_shows.id
 GROUP BY title
 ORDER BY rating DESC;
