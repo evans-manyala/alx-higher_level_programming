@@ -1,9 +1,6 @@
 #!/usr/bin/node
 
-if (process.argv[2] && process.argv[3]) {
-  const arg1 = process.argv[2];
-  const arg2 = process.argv[3];
-  console.log(`${arg1} is ${arg2}`);
-} else {
-  console.log('Please provide two arguments');
+function printWithSpace (arg1, arg2) {
+  console.log(`${arg1} \u00A0 is \u00A0 ${arg2}`);
 }
+printWithSpace(process.argv[2], process.argv[3]);
