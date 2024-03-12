@@ -2,7 +2,7 @@
 
 const firstArg = process.argv[2];
 
-function factorial(n) {
+function factorial (n) {
   if (isNaN(n) || n < 0) {
     return undefined;
   } else if (n === 0 || n === 1) {
