@@ -8,6 +8,6 @@ if (isNaN(number)) {
 }
 
 while (number > 0) {
-  console.log('C is Fun');
+  console.log('C is fun');
   number--;
 }
