@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
 const myVar = 'C is Fun';
+const args = process.argv;
 const number = parseInt(args[2]);
 
 if (isNaN(number)) {
