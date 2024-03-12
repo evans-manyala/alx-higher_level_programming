@@ -9,5 +9,5 @@ if (isNaN(number)) {
 
 while (number > 0) {
   console.log('C is Fun');
-  number++;
+  number--;
 }
