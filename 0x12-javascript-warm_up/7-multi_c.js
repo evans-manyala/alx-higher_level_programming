@@ -3,11 +3,13 @@
 const myVar = 'C is Fun';
 const args = process.argv;
 const number = parseInt(args[2]);
+let i = 0;
 
 if (isNaN(number)) {
   console.log('Missing number of occurrences');
 } else {
-  for (let i = 0; i < number; i++) {
-    console.log(myVar);
-  }
+	while(i < number) {
+		console.log(myVar);
+		i++;
+	}
 }
