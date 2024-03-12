@@ -1,11 +1,12 @@
 #!/usr/bin/node
 
-const args = process.argv.length - 2;
 const myVar = 'C is Fun';
 const number = parseInt(args[2]);
 
 if (isNaN(number)) {
-  console.log('Not a number');
+  console.log('Missing number of occurrences');
 } else {
-  console.log(myVar);
+  for (let i = 0; i < number; i++) {
+    console.log(myVar);
+  }
 }
