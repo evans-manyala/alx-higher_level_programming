@@ -1,15 +1,13 @@
 #!/usr/bin/node
 
-const myVar = 'C is Fun';
-const args = process.argv;
-const number = parseInt(args[2]);
-let i = 0;
+const args = process.argv[2];
+let number = parseInt(args);
 
 if (isNaN(number)) {
   console.log('Missing number of occurrences');
-} else {
-  while (i < number) {
-    console.log(myVar);
-    i++;
-  }
+}
+
+while (number > 0) {
+  console.log('C is Fun');
+  number++;
 }
