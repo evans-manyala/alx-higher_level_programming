@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const fp = require('fp');
 
 const srcFile1 = process.argv[2];
