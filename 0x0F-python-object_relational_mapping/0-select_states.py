@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """This script lists all states from the database `hbtn_0e_0_usa`"""
 
 if __name__ == "__main__":
@@ -8,25 +7,21 @@ if __name__ == "__main__":
 
     username, password, database_name = sys.argv[1:]
 
-    db = MySQLdb.connect(
+    myDB = MySQLdb.connect(
         host="localhost",
         user=username,
         password=password,
-        db=database_name,
+        database=database_name,
         port=3306,
     )
 
-    cursor = db.cursor()
-    cursor.execute(
-        """
-        SELECT * FROM states ORDER BY states.id;
-        """
-    )
+    cursor = myDB.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
 
     states = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    for row in states:
+        print(row)
 
     cursor.close()
-    db.close()
+    myDB.close()
