@@ -35,6 +35,6 @@ if __name__ == "__main__":
         get_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
     except IndexError:
         sys.stderr.write(
-            f"Usage: {sys.argv[0]} <username> <password> <db_name>\n"
+            f"Usage: {sys.argv[0]} <username> <password> <database_name>\n"
         )
         sys.exit(1)
