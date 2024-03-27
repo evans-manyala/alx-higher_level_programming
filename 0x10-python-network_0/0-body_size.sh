@@ -1,3 +1,3 @@
 #!/bin/bash
-
-curl -sI "$1" | grep -i Content-Length | awk '{print "The response size for",$1,"is:",$2,"bytes"}' || echo "Error: Could not retrieve response size for the URL."
+# Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
+curl -sI "$1" | grep -i 'Content-Length' | awk '{print $2}'
