@@ -5,20 +5,21 @@
 
 ## General
 In this project, we are going to run scripts that answer the following:
-What a URL is
-What HTTP is
-How to read a URL
-The scheme for a HTTP URL
-What a domain name is
-What a sub-domain is
-How to define a port number in a URL
-What a query string is
-What an HTTP request is
-What an HTTP response is
-What HTTP headers are
-What the HTTP message body is
-What an HTTP request method is
-What an HTTP response status code is
-What an HTTP Cookie is
-How to make a request with cURL
-What happens when you type google.com in your browser (Application level)
+
+1. What a URL is
+2. What HTTP is
+3. How to read a URL
+4. The scheme for a HTTP URL
+5. What a domain name is
+6. What a sub-domain is
+7. How to define a port number in a URL
+8. What a query string is
+9. What an HTTP request is
+10. What an HTTP response is
+11. What HTTP headers are
+12. What the HTTP message body is
+13. What an HTTP request method is
+14. What an HTTP response status code is
+15. What an HTTP Cookie is
+13. How to make a request with cURL
+14. What happens when you type google.com in your browser (Application level)
