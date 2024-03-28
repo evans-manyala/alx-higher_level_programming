@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     # Define the URL to fetch
     url = 'https://alx-intranet.hbtn.io/status'
-    
+
     # Send a GET request to the URL
     response = requests.get(url)
     print("Body response:")
