@@ -6,15 +6,11 @@ URL and displays the value of the X-Request-Id variable found in the header of t
 import urllib.request
 import sys
 
+if __name__ == "__main__":
 # Fetch the URL argument
-url = sys.argv[1]
-
-with urllib.request.urlopen(url) as response:
-   # Retrieve the response headers as a dictionary
-   headers = response.info()
-
-   # Extract the X-Request-Id value, handling potential errors
-   x_request_id = headers.get('X-Request-Id', 'Not Found')
-
-   # Display the value
-   print(f"X-Request-Id: {x_request_id}")
+    url = sys.argv[1]
+    
+    request = urllib.request.urlopen(url)
+    with urllib.request.urlopen(url) as response:
+        # Display the value
+        print(dict(response.headers).get("X-Request-Id"))
