@@ -7,22 +7,11 @@ using urllib.
 import urllib.request
 
 
-def fetch_status(url):
-    """
-    Fetches the status from the given URL
-    and displays the body of the response.
-
-    Args:
-        url (str): The URL to fetch the status from.
-    """
-
-    with urllib.request.urlopen(url) as response:
-        body = response.read().decode('utf-8')
-
-    # Print the response body with tabs before each line
-    print("\t".join(body.splitlines()))
-
-
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
-    fetch_status(url)  # Call the function to fetch and display
+    request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))
