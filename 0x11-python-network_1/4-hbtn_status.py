@@ -4,7 +4,7 @@ Write a Python script that fetches https://alx-intranet.hbtn.io/status
 Using the package requests to display reponse in tabulation before -
 """
 
-import urllib.request
+import requests
 
 if __name__ == "__main__":
 
