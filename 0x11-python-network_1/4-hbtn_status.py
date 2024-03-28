@@ -13,7 +13,13 @@ if __name__ == "__main__":
 
     # Send a GET request to the URL
     response = requests.get(url)
-    print("Body response:")
-    print("\t- type: {}".format(type(response.text)))
-    print("\t- content: {}".format(response.text))
-    print("\t- utf8 content: {}".format(response.text.encode("utf-8")))
+
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Display the body of the response in the desired format
+        print("Body response:")
+        print("\t- type:", type(response.text))
+        print("\t- content:", response.text)
+    else:
+        # Print an error message if the request was not successful
+        print(f"Error fetching URL. Status code: {response.status_code}")
