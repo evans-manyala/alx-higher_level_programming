@@ -1,7 +1,7 @@
 #!usr/bin/python3
 """
 Write a Python script that fetches https://alx-intranet.hbtn.io/status
-Using the package requests to display reponse in tabulation before -
+Using the package requests to display response in tabulation before -
 """
 
 
