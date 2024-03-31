@@ -9,16 +9,17 @@ import sys
 
 
 if __name__ == "__main__":
-    q = sys.argv[1] if len(sys.argv) > 1 else ""
     url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(url, data={"q": q})
+    if len (sys.argv) < 2:
+        print("No results")
+    else:
+        response = requests.post(url, data={'q': sys.argv[1]})
+        try:
+            json_r = response.json()
 
-    try:
-        json_r = response.json()
-
-        if json_r:
-            print(f"[{json_r.get('id')}]{json_r.get('name')}")
-        else:
-            print("No results")
-    except ValueError:
-        print("Not a valid JSON")
+            if json_r:
+                print(f"[{json_r.get('id')}]{json_r.get('name')}")
+            else:
+                print("No results")
+        except ValueError:
+            print("Not a valid JSON")
