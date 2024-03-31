@@ -1,8 +1,11 @@
 #!usr/bin/python3
+
 """
 Write a Python script that fetches https://alx-intranet.hbtn.io/status
 Using the package requests to display response in tabulation before -
 """
+
+
 import requests
 
 if __name__ == "__main__":
