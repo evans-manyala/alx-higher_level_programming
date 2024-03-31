@@ -3,10 +3,10 @@
 Write a Python script that fetches https://alx-intranet.hbtn.io/status
 Using the package requests to display response in tabulation before -
 """
-
+import requests
 
 if __name__ == "__main__":
-    r = requests.get("https://alx-intranet.hbtn.io/status")
+    response = requests.get("https://alx-intranet.hbtn.io/status")
     print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
