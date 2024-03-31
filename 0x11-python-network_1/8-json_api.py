@@ -9,9 +9,9 @@ import sys
 
 
 if __name__ == "__main__":
-    queue = sys.argv[1] if len(sys.argv) > 1 else ""
+    q = sys.argv[1] if len(sys.argv) > 1 else ""
     url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(url, data={"queue": queue})
+    response = requests.post(url, data={"q": q})
 
     try:
         json_r = response.json()
