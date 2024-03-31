@@ -10,7 +10,7 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    if len (sys.argv) < 2:
+    if len(sys.argv) < 2:
         print("No results")
     else:
         response = requests.post(url, data={'q': sys.argv[1]})
@@ -18,7 +18,7 @@ if __name__ == "__main__":
             json_r = response.json()
 
             if json_r:
-                print(f"[{json_r.get('id')}]{json_r.get('name')}")
+                print("[{}] {}".format(json_r.get('id'), json_r.get('name')))
             else:
                 print("No results")
         except ValueError:
