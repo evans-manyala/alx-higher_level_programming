@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-"""
-Python script using basic authentication is able 
+"""Python script using basic authentication is able 
 to use GitHub Credentials and GitHub APIs to print
-UserID
-"""
+UserID"""
 
-import requests
 import sys
+import requests
 from requests.auth import HTTPBasicAuth
 
-if "___name__" == "__main__":
-        url = "https://api.github.com/user"
-        verify = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-        response = requests.get(url, auth=verify)
-        print(response.json().get("id"))
+
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+
+    url = 'https://api.github.com/user'
+
+    auth = HTTPBasicAuth(username, password)
+    response = requests.get(url, auth=auth)
+    print(response.json().get("id"))
