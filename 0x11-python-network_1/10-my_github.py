@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script using basic authentication is able 
+"""Python script using basic authentication is able
 to use GitHub Credentials and GitHub APIs to print
 UserID"""
 
