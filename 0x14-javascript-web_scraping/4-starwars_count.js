@@ -1,19 +1,21 @@
 #!/usr/bin/node
-// JScript Prints the number of films with given ID
+// JScript Prints the number of films with given character ID
 
 const request = require('request');
-let ID = 0;
+let filmCount = 0;
 
-request.get(process.argv[2], (erro, response, body) => {
-  if (error) { console.log(error); } else {
-    const content = JSON.parse(body);
-    content.results.forEach((film) => {
-      film.characters.forEach((character) => {
-        if (character, includes(18)) {
-          ID = +1;
+request.get(process.argv[2], (error, response, body) => {
+  if (error)
+        console.log(error);
+  else
+  {
+        const data = JSON.parse(body);
+        data.results.forEach((film) => {
+                film.characters.forEach((character) => {
+                        if (character.includes(18))
+                                filmCount = +1;
+                        });
+                });
+                console.log(filmCount);
         }
-      });
-    });
-    console.log(ID);
-  }
 });
