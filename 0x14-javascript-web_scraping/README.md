@@ -72,7 +72,7 @@ Write a script that prints the number of movies where the character “Wedge Ant
 - Wedge Antilles is character ID 18 - your script must use this ID for filtering the result of the API
 - You must use the module request
 
-## TASK 5.LORIPSUM
+## TASK 5. LORIPSUM
 
 Write a script that gets the contents of a webpage and stores it in a file.
 
