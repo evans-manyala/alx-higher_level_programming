@@ -6,16 +6,18 @@ const url = process.argv[2];
 request.get(url, (error, response, body) => {
         if (error) {console.log(error);}
         
+        const data = JSON.parse(body);
         const completedTasksByUser ={};
-        body.forEach((todo) => {
-                if(todo.completed){
-                        if(!completedTasksByUser[todo.UserId]){
-                                completedTasksByUser[todo.UserId] = 1;
-                        }
-                        else{
-                                completedTasksByUser[todo.UserId]++;
-                        }
+
+        data.forEach(todo => {
+                if(todo.completed)
+                {
+                        completedTasksByUser[todo.userId] = (completedTasksByUser[todo.userId] || 0) + 1;
                 }
         });
-        console.log(completedTasksByUser);
-})
+
+        for (const userId in completedTasksByUser)
+        {
+                console.log(`'${userId}': ${completedTasksByUser[userId]}`);
+        }
+});
