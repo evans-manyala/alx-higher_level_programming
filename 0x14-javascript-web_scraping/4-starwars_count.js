@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // JScript Prints the number of films with given ID
 
-const { error } = require('console');
 const request = require('request');
 let ID = 0;
 
