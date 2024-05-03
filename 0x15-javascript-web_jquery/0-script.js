@@ -1,3 +1,2 @@
-// Update text color of the HTML tag HEADER to RED
-
-document.querySelector('head').style.color = '#FF0000';
+const colorHeader = document.querySelector('header');
+colorHeader.style.color = '#FF0000';
